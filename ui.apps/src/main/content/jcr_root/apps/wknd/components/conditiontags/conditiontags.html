@@ -2,8 +2,6 @@
      data-sly-use.templates="core/wcm/components/commons/v1/templates.html"></sly>
 <sly data-sly-call="${templates.placeholder @ isEmpty=wcmmode.edit, classAppend='cmp-static-info'}"></sly>
 
-<ul data-sly-list.conditiontags = "${conditonTags.conditiontags}">
-
     ${conditiontags.image}
     ${conditiontags.conditionLabel}
     ${conditiontags.conditionTags}
@@ -11,6 +9,3 @@
     ${conditiontags.title}
     ${conditiontags.ctaLink}   
 
-</ul>
-
-</sly>
