@@ -12,7 +12,10 @@ import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 public class InnerCarouselBean {
 
     @ValueMapValue
-    private String image;
+    private String desktopImage;
+
+    @ValueMapValue
+    private String mobileImage;
 
     @ValueMapValue
     private String altText;
@@ -26,8 +29,13 @@ public class InnerCarouselBean {
     @ValueMapValue
     private String description;
 
-    public String getImage() {
-        return image;
+    
+    public String getDesktopImage() {
+        return desktopImage;
+    }
+
+    public String getMobileImage() {
+        return mobileImage;
     }
 
     public String getAltText() {

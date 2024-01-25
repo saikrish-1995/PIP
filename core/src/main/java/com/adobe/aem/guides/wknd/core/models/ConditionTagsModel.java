@@ -31,6 +31,9 @@ public class ConditionTagsModel implements ComponentExporter {
     private String conditionLabel;
 
     @ValueMapValue
+    private String bgColor;
+    
+    @ValueMapValue
     private String ctaText;
 
     @ValueMapValue
@@ -54,6 +57,10 @@ public class ConditionTagsModel implements ComponentExporter {
 
     public String getConditionLabel() {
         return conditionLabel;
+    }
+
+    public String getBgColor() {
+        return bgColor;
     }
 
     public String getCtaText() {

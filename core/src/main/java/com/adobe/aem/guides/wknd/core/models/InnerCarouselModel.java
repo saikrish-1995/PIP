@@ -9,6 +9,7 @@ import org.apache.sling.models.annotations.DefaultInjectionStrategy;
 import org.apache.sling.models.annotations.Exporter;
 import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.injectorspecific.ChildResource;
+import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,12 +23,25 @@ public class InnerCarouselModel implements ComponentExporter {
 
     protected static final String INNER_CAROUSEL_RESOURCE_TYPE = "wknd/components/innercarousel";
 
-
     @ChildResource
     private List<InnerCarouselBean> innerCarousel = new ArrayList<>();
 
+    @ValueMapValue
+    private String next;
+
+    @ValueMapValue
+    private String prev;
+
     public List<InnerCarouselBean> getInnerCarousel() {
         return innerCarousel;
+    }
+
+    public String getNext() {
+        return next;
+    }
+
+    public String getPrev() {
+        return prev;
     }
 
 
@@ -35,4 +49,5 @@ public class InnerCarouselModel implements ComponentExporter {
     public String getExportedType() {
         return InnerCarouselModel.INNER_CAROUSEL_RESOURCE_TYPE;
     }
+
 }
