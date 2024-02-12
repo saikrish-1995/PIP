@@ -1,0 +1,47 @@
+# Retrieves an Article by path.
+#
+# Required query variables:
+# - {"articlePath": "/content/dam/wknd-shared/en/magazine/alaska-adventure/alaskan-adventures"}
+#
+# Optional query variables:
+# - { 
+#     "imageFormat": "PNG",
+#     "imageSeoName": "my-article",
+#     "imageWidth": 1400,
+#     "imageQuality": 95 
+#   }
+
+query getArticleByPath($articlePath: String!, $imageFormat: AssetTransformFormat=PNG, $imageSeoName: String, $imageWidth: Int=1200, $imageQuality: Int=80) {
+  articleByPath(_path: $articlePath, _assetTransform: {
+      format: $imageFormat
+      seoName: $imageSeoName
+      width: $imageWidth
+      quality: $imageQuality
+      preferWebp: true
+  }) {
+    item {
+      _path
+      title
+      slug
+      main {
+        json
+      }
+      featuredImage {
+        ... on ImageRef {
+          _path
+          _dynamicUrl
+        }
+      }
+      authorFragment {
+        firstName
+        lastName
+        profilePicture {
+          ... on ImageRef {
+            _path
+            _dynamicUrl
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
     jcr:mixinTypes="[rep:AccessControllable]"
     jcr:primaryType="cq:Page">
     <rep:policy/>
@@ -492,9 +492,8 @@
                     allowedRenditionWidths="[100,200,300,400,500,600,700,800,900,1000,1100,1200,1600]"
                     allowUpload="true"
                     altValueFromDAM="true"
-                    disableLazyLoading="true"
+                    disableLazyLoading="false"
                     displayPopupTitle="true"
-                    enableAssetDelivery="true"
                     isDecorative="false"
                     jpegQuality="{Long}60"
                     titleValueFromDAM="true"
@@ -1141,6 +1140,7 @@
                     jcr:title="WKND Site Theme"
                     sling:resourceType="wcm/core/components/policy/policy"
                     clientlibs="[wknd.site,wknd.base]"
+                    clientlibsAsync="true"
                     clientlibsJsHead="wknd.dependencies">
                     <jcr:content
                         cq:lastReplicated="{Date}2023-09-15T11:00:00.000-07:00"
@@ -1159,7 +1159,8 @@
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Experience Fragment Web"
                     sling:resourceType="wcm/core/components/policy/policy"
-                    clientlibs="[wknd.site,wknd.base]">
+                    clientlibs="[wknd.site,wknd.base]"
+                    clientlibsAsync="true">
                     <jcr:content
                         cq:lastReplicated="{Date}2023-09-15T11:00:00.000-07:00"
                         cq:lastReplicated_preview="{Date}2023-09-15T11:00:00.000-07:00"
