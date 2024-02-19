@@ -1,24 +1,5 @@
-<sly data-sly-use.news="com.adobe.aem.guides.wknd.core.models.RecentNewsModel"
+<sly data-sly-use.news="com.adobe.aem.guides.wknd.core.models.LatestArticlesPageModel"
      data-sly-use.templates="core/wcm/components/commons/v1/templates.html"></sly>
 <sly data-sly-call="${templates.placeholder @ isEmpty=wcmmode.edit, classAppend='cmp-static-info'}"></sly>
-
-<ul data-sly-list.recentnews = "${news.recentNewsList}">
-
-  <br>  ${recentnews.image}
-    ${recentnews.altText}
-    ${recentnews.newsTitleTag}
-    ${recentnews.title}
-    ${recentnews.description}
-    ${recentnews.newsDate}
-    ${recentnews.newsSource}
-    ${recentnews.readStoryLabel}
-    ${recentnews.readStoryLink}
-    
-    </br>
-
-</ul>
-
-  ${news.viewAllLabel}
-  ${news.redirectUrl}
 
 </sly>
