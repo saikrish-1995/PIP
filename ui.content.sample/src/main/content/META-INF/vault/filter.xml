@@ -3,6 +3,7 @@
 
     <!-- Content Filters -->
     <filter root="/content/wknd" />
+    <filter root="/content/wknd-shared" />
     <!-- Changing the filter mode to merge will preserve any existing content on the target environment
     <filter root="/content/wknd" mode="merge"/>
     -->

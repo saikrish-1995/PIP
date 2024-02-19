@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Our Specialty"
+          sling:resourceType="cq/gui/components/authoring/dialog"
+          helpPath="https://www.adobe.com/go/aem_cmp_page_v3"
+          mode="edit"
+          trackingFeature="core-components:page:v3">
+    <content
+            granite:class="cq-dialog-content-page"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                    size="L">
+                <items jcr:primaryType="nt:unstructured">
+                    <our-specialty
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Our Specialty"
+                            sling:orderBefore="advanced"
+                            sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <configuration
+                                            jcr:primaryType="nt:unstructured"
+                                            jcr:title="Specialty Configuration"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <title
+                                                    cq:showOnCreate="{Boolean}true"
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    emptyText="title"
+                                                    fieldLabel="Title"
+                                                    name="./title"/>
+                                            <description
+                                                    cq:showOnCreate="{Boolean}true"
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                    emptyText="description"
+                                                    fieldLabel="Description"
+                                                    name="./description"
+                                                    required="{Boolean}false"/>
+                                            <learn-more-label
+                                                    cq:showOnCreate="{Boolean}true"
+                                                    jcr:primaryType="nt:unstructured"
+                                                    emptyText="Learn more"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Learn more label"
+                                                    name="./learnMore"
+                                                    required="{Boolean}false"/>
+                                            <redirect-url
+                                                    cq:showOnCreate="{Boolean}true"
+                                                    jcr:primaryType="nt:unstructured"
+                                                    emptyText="Learn more redirect url"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                    fieldLabel="Redirect url"
+                                                    name="./redirectUrl"
+                                                    rootPath="/content/wknd"/>
+                                            <browse-doctor-label
+                                                    cq:showOnCreate="{Boolean}true"
+                                                    jcr:primaryType="nt:unstructured"
+                                                    emptyText="Browse doctor"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Browse doctor label"
+                                                    name="./browseDoctor"
+                                                    required="{Boolean}false"/>
+                                            <doctor-page-path
+                                                    cq:showOnCreate="{Boolean}true"
+                                                    jcr:primaryType="nt:unstructured"
+                                                    emptyText="Doctor page path"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                    fieldLabel="Doctor Page Path"
+                                                    name="./doctorPage"
+                                                    rootPath="/content/wknd"/>
+                                        </items>
+                                    </configuration>
+                                </items>
+                            </column>
+                        </items>
+                    </our-specialty>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

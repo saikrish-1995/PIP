@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root
+		xmlns:jcr="http://www.jcp.org/jcr/1.0"
+		xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+		xmlns:cq="http://www.day.com/jcr/cq/1.0"
+		xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+		jcr:primaryType="nt:unstructured"
+		jcr:title="Latest Article"
+		sling:resourceType="cq/gui/components/authoring/dialog">
+	<content
+			jcr:primaryType="nt:unstructured"
+			sling:resourceType="granite/ui/components/coral/foundation/tabs">
+		<items jcr:primaryType="nt:unstructured">
+			<general-tab
+					jcr:primaryType="nt:unstructured"
+					jcr:title="General tab"
+					sling:resourceType="granite/ui/components/coral/foundation/container"
+					margin="{Boolean}true">
+				<items jcr:primaryType="nt:unstructured">
+					<container
+							jcr:primaryType="nt:unstructured"
+							sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+						<items jcr:primaryType="nt:unstructured">
+							<column
+									jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/coral/foundation/container">
+								<items jcr:primaryType="nt:unstructured">
+									<sectionTitle
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+											fieldDescription="Configure Section Title"
+											emptyText="Section Title"
+											fieldLabel="Section Title"
+											name="./sectionTitle"
+											required="{Boolean}true"/>
+									<event-display-type
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/coral/foundation/form/radiogroup"
+											fieldLabel="Events"
+											name="./cardType">
+										<items jcr:primaryType="nt:unstructured">
+											<upcoming
+													jcr:primaryType="nt:unstructured"
+													checked="{Boolean}true"
+													text="Upcoming Events"
+													value="upcoming"/>
+											<active
+													jcr:primaryType="nt:unstructured"
+													checked="{Boolean}true"
+													text="Active Events"
+													value="active"/>
+											<past
+													jcr:primaryType="nt:unstructured"
+													checked="{Boolean}true"
+													text="Past Events"
+													value="past"/>
+										</items>
+									</event-display-type>
+								</items>
+							</column>
+						</items>
+					</container>
+				</items>
+			</general-tab>
+		</items>
+	</content>
+</jcr:root>
